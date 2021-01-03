@@ -1,0 +1,16 @@
+expression: "[" operator NUMBER sets "]"
+sets: set+
+?set: FILENAME | expression
+?operator: OPERATOR_EQ | OPERATOR_LE | OPERATOR_GR
+OPERATOR_EQ: "EQ"
+OPERATOR_LE: "LE"
+OPERATOR_GR: "GR"
+// For simplicity: either an escaped string (always double quote-delimited),
+// or any string starting with "/", ".", "~" or \w which does not contain any
+// whitespace.
+FILENAME: ESCAPED_STRING | /[.~\/\w]\S*/
+
+%import common.INT -> NUMBER
+%import common.ESCAPED_STRING
+%import common.WS
+%ignore WS
