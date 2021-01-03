@@ -49,8 +49,9 @@ Running the command for the first time will check if a vitualenv exists in the
 current directory and set it up with bin/setup.sh if it doesn't.
 
 After that, each invocation of setcalc.sh will just activate the virtualenv,
-execute the `setcalc` package with `python -m` (passing through all of the
+execute the `setcalc` package with `python -m`, (passing through all of the
 CLI arguments), and deactivate the virtualenv.
+
 -------------------------------------------------------------------------------
                              TROUBLESHOOTING
 -------------------------------------------------------------------------------
